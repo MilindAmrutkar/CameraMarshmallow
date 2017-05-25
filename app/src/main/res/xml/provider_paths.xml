@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--The content of the file is shown below. It describes that we would like to share access to the External Storage at root folder (path=".") with the name external_files.-->
+    <external-path name="external_files" path="."/>
+</paths>
