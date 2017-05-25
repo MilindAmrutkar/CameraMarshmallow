@@ -52,13 +52,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         permissionStatus = getSharedPreferences("permissionStatus", MODE_PRIVATE);
-
-        /*if((ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED)) {
-            sendValues.setEnabled(false);
-            ActivityCompat.requestPermissions(this, new String[] {
-                    Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE
-            }, 0);
-        }*/
     }
 
 
@@ -67,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             proceedAfterPermission();
 
             for (int i = 0; i < ivImages.length; i++) {
-                if(view == (ImageView) findViewById(ivImages[i])){
+                if(view == findViewById(ivImages[i])){
                     currentImage = (ImageView) findViewById(ivImages[i]);
                     Log.i(TAG, "takePicture: currentImage: "+currentImage);
                 }
